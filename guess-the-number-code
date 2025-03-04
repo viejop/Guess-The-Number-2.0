@@ -1,7 +1,7 @@
 import random
 import os
 
-
+#structure for the class
 class User:
     def __init__(self, name, score):
         self.name = name
@@ -13,6 +13,7 @@ class User:
     def displayProperties(self):
         return f"Name: {self.name}, Score: {self.score}\n"
 
+#creating a main menu
 def titleScreen():
     print("#############################")
     print("||                         ||")
@@ -22,7 +23,7 @@ def titleScreen():
     print("1. How to play")
     print("2. Start game")
     
-
+#title screen logic
     while True:
         titleInput = input("Enter your choice (1 or 2): ")
         
@@ -42,6 +43,7 @@ def titleScreen():
         elif not titleInput.isdigit():
             print("Invalid input")
             continue
+#game logic
 def game(): 
     #username input
     print("Please input a username.")
@@ -50,6 +52,7 @@ def game():
     
     print("Username successfully stored.")
 
+#loop for guessing
     while True: 
         guessCounter = 0
         correctAnswer = random.randint(1, 100)
